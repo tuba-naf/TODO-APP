@@ -61,6 +61,19 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        // Login function
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email && password) {
+                // Add your Firebase authentication logic if needed
+                // For now, redirecting to mainpage.html
+                window.location.href = 'mainpage.html';
+            } else {
+                alert('Please fill in both email and password.');
+            }
+        }
     </script>
     <script src="apps.js"></script>
 </body>
