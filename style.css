@@ -8,52 +8,96 @@ body {
     height: 100vh;
     background-color: #f4f4f4;
 }
+
 div {
     text-align: center;
     margin: 20px;
+    display: flex; /* Align input and buttons in the same row */
+    flex-wrap: nowrap; /* Prevent wrapping to ensure elements stay in one row */
+    gap: 20px; /* Adds spacing between elements */
+    align-items: center; /* Vertically centers the elements */
 }
+
 input[type="text"] {
     padding: 10px;
-    width: 60%;
+    width: 100%;
     max-width: 300px;
     border: 2px solid #ccc;
     border-radius: 4px;
-    margin-right: 10px;
     box-sizing: border-box;
+    
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px 30px; /* Increased width for buttons */
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 180px; /* Ensures uniform button width */
 }
 
 button:hover {
     background-color: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 button:last-of-type {
     background-color: #dc3545;
-    margin: 20px 0px 0px 320px;
-    
+    margin-left: 0; /* Ensure consistent spacing */
 }
+
 button:last-of-type:hover {
     background-color: #c82333;
 }
+
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0px;
+    margin-top: 15px;
+    
+    width: 100%; /* Matches the width of input and buttons */
 }
+
 li {
-    padding: 10px;
+    padding: 20px;
     background-color: #fff;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensures list item matches input and button width */
+    transition: all 0.3s ease; /* Adds smooth transition for consistency */
 }
+
+li .item-content {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+li .item-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjusted for smaller, consistent space between buttons */
+    width: 100%; /* Ensures buttons stay in a consistent layout */
+}
+
+li .item-buttons button {
+    padding: 8px 16px;
+    flex: 0;
+    width: 140px; /* Ensures buttons have uniform width */
+}
+
 @media (max-width: 480px) {
     body {
         flex-direction: column;
@@ -62,19 +106,22 @@ li {
     }
 
     div {
-        width: 100%;
+        width: 80%;
         margin: 10px 0;
         padding: 10px;
+        align-items: center;
+        flex-direction: column; /* Stacks elements vertically on smaller screens */
     }
 
     input[type="text"] {
         width: 100%;
-        margin-bottom: 10px;
+        
     }
 
     button {
         width: 100%;
         margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     button:last-of-type {
