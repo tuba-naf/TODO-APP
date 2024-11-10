@@ -14,18 +14,14 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand">TNCreation</a>
-            <a href="login.html"><button class="btn btn-outline-success" type="submit">LOGIN</button></a>
+            <a href="index.html"> <button class="btn btn-outline-success" type="submit">REGISTER</button></a>
         </div>
     </nav>
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-6 justify-content-center">
-                <h2>Register</h2>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Username</label>
-                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
-                </div>
+                <h2>Login</h2>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
@@ -40,7 +36,7 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button onclick="register()" type="submit" class="btn btn-primary">Register</button>
+                <button onclick="login()" type="submit" class="btn btn-primary">Login</button>
             </div>
         </div>
     </div>
@@ -61,13 +57,12 @@
     storageBucket: "online-web-course-d30e5.firebasestorage.app",
     messagingSenderId: "703848668136",
     appId: "1:703848668136:web:a8d15609729578b903625d"
-  
+
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
     <script src="apps.js"></script>
-
 </body>
 
 </html>
